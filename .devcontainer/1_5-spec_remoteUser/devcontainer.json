@@ -7,7 +7,7 @@ Defaults to the user the container as a whole is running as (often root).
 A dev container configuration will inherit the remoteUser property from the base image it uses.
 */
 {
-  "name": "minimal_ubuntu",
+  "name": "1_5-spec_remoteUser",
   "image": "ubuntu:latest",
   "remoteUser": "developer"
 }

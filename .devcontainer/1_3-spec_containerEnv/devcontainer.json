@@ -12,7 +12,7 @@ We recommend using containerEnv (over remoteEnv) as much as possible since it al
 the variable and isn’t client-specific.
 */
 {
-  "name": "minimal_ubuntu",
+  "name": "1_3-spec_containerEnv",
   "image": "ubuntu:latest",
   "containerEnv": {
     "HOSTHOME": "${localEnv:HOME}",
