@@ -15,4 +15,4 @@ Default options for ports, port ranges, and hosts that aren’t configured using
 }
 
 //TODO: In the future support for onAutoForward, requireLocalPort, elevateIfNeeded are planned.
-//https://youtrack.jetbrains.com/issue/IDEA-337384/Devcontainers-support-Ports-attributes-options
+//IDEA-337384

@@ -28,4 +28,4 @@ is forwarded automatically.
 }
 
 //TODO: In the future support for onAutoForward, requireLocalPort, elevateIfNeeded are planned.
-//https://youtrack.jetbrains.com/issue/IDEA-337384/Devcontainers-support-Ports-attributes-options
+//IDEA-337384
