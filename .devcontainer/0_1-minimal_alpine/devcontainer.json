@@ -1,0 +1,8 @@
+{
+  "name": "minimal_alpine",
+  "image": "busybox:latest",
+  "onCreateCommand": {
+    "update": "apk update",
+    "installDependencies": "apk add unzip curl libxext libxrender libxtst libxi freetype procps gcompat"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "name": "minimal_ubuntu",
+  "image": "ubuntu:latest",
+}
