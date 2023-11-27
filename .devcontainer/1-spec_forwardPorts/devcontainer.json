@@ -11,6 +11,11 @@
   Defaults to [].
   */
 
+  /*
+  The forwardPorts feature currently works only in automatic mode, and the flag does not need to be set.
+  If an application launched from the IDE in the devcontainer starts listening to a port, the port
+  is forwarded automatically.
+  */
 {
   "name": "1-spec_forwardPorts",
   "build": {
@@ -18,4 +23,5 @@
   },
   "forwardPorts": [8080]
 }
+  //TODO: In the future support for hostname:port when used with compose are planned https://youtrack.jetbrains.com/issue/IDEA-335758/host-in-forwardPorts .
 
