@@ -1,0 +1,21 @@
+
+  /*
+  An array of port numbers or "host:port" values (e.g. [3000, "db:5432"])
+  that should always be forwarded from inside the primary container
+  to the local machine (including on the web).
+  The property is most useful for forwarding ports
+  that cannot be auto-forwarded
+  because the related process that starts before the devcontainer.json
+  supporting service / tool connects or for forwarding a service
+  not in the primary container in Docker Compose scenarios (e.g. "db:5432").
+  Defaults to [].
+  */
+
+{
+  "name": "1-spec_forwardPorts",
+  "build": {
+    "dockerfile": "../../demoApps/python-webserver/Dockerfile"
+  },
+  "forwardPorts": [8080]
+}
+
