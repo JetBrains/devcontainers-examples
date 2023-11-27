@@ -14,7 +14,7 @@ the variable and isn’t client-specific.
 {
   "name": "minimal_ubuntu",
   "image": "ubuntu:latest",
-  containerEnv: {
+  "containerEnv": {
     "HOSTHOME": "${localEnv:HOME}",
     "HOSTNAME": "jetbrains.com"
   }
