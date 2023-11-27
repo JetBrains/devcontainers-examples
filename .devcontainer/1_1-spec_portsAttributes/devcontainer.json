@@ -12,7 +12,7 @@ is forwarded automatically.
 
 */
 {
-  "name": "1-spec_forwardPorts",
+  "name": "1_1-spec_portsAttributes",
   "build": {
     "dockerfile": "../../demoApps/python-webserver/Dockerfile"
   },
