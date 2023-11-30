@@ -4,7 +4,7 @@ A command string or list of command arguments to run on the host machine before 
 Note that the array syntax will execute the command without a shell.
 */
 {
-  "name": "minimal_ubuntu",
+  "name": "spec-lifecycle_initializeCommand",
   "image": "ubuntu:latest",
 //  "initializeCommand": "echo 'Initializing Dev Container...'"
 //  "initializeCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]

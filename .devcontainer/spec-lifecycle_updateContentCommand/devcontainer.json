@@ -8,13 +8,19 @@ and org scoped secrets or permissions.
 Note that the array syntax will execute the command without a shell.
 */
 {
-  "name": "minimal_ubuntu",
+  "name": "spec-lifecycle_updateContentCommand",
   "image": "ubuntu:latest",
   //  "updateContentCommand": "echo 'Initializing Dev Container...'"
   //  "updateContentCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
   "updateContentCommand": {
     "1": "ls /",
-    "2": "echo 'Updating content'",
+    "2": "echo 'Initializing Dev Container...'",
     "3": "echo c"
   }
 }
+/*
+Now the command is executed correctly. To verify this, in the Client IDE, select Help -> Collect Host and Client Logs.
+The resulting zip archive should be unzipped, and in the Host -> idea.log folder, you can find the terminal output of
+the command execution. In the future, we plan to display the execution of the command in the terminal of the client IDE.
+IDEA-339416
+*/
