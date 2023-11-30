@@ -1,0 +1,20 @@
+/*
+This command is the second of three that finalizes container setup when a dev container is created.
+It executes inside the container after onCreateCommand whenever new content is available in the source
+tree during the creation process.
+It will execute at least once, but cloud services will also periodically execute the command to refresh cached or
+prebuilt containers. Like cloud services using onCreateCommand, it can only take advantage of repository
+and org scoped secrets or permissions.
+Note that the array syntax will execute the command without a shell.
+*/
+{
+  "name": "minimal_ubuntu",
+  "image": "ubuntu:latest",
+  //  "updateContentCommand": "echo 'Initializing Dev Container...'"
+  //  "updateContentCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
+  "updateContentCommand": {
+    "1": "ls /",
+    "2": "echo 'Updating content'",
+    "3": "echo c"
+  }
+}
