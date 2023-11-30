@@ -1,0 +1,20 @@
+/*
+An enum that specifies the command any tool should wait for before connecting.
+Defaults to updateContentCommand. This allows you to use onCreateCommand or updateContentCommand
+for steps that must happen before devcontainer.json supporting tools connect while still using
+postCreateCommand for steps that can happen behind the scenes afterwards.
+*/
+{
+  "name": "spec-lifecycle_waitFor",
+  "image": "ubuntu:latest",
+  "waitFor": [
+    {
+      "exec": "curl -s http://localhost:3000/health | grep 'OK'",
+      "checkInterval": 2000,
+      "timeout": 60000
+    }
+}
+/*
+Not supported now!
+IDEA-339422
+*/

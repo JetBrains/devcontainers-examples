@@ -14,8 +14,8 @@ Note that the array syntax will execute the command without a shell.
   //  "updateContentCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
   "updateContentCommand": {
     "1": "ls /",
-    "2": "echo 'Initializing Dev Container...'",
-    "3": "echo c"
+    "2": "echo 'UpdateContentCommand...'",
+    "3": "echo 'ok'"
   }
 }
 /*
