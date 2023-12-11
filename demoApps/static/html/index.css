@@ -1,0 +1,16 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    color: #33ff33;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#console {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(51, 255, 51, 0.8);
+}
