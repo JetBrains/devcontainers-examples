@@ -20,8 +20,10 @@
   "name": "1-spec_forwardPorts",
   "build": {
     "dockerfile": "../../demoApps/python-webserver/Dockerfile"
-  },
-  "forwardPorts": [8080]
+  }
+//  "forwardPorts": [8080]
 }
-  //TODO: In the future support for hostname:port when used with compose are planned https://youtrack.jetbrains.com/issue/IDEA-335758/host-in-forwardPorts .
+  /*TODO: In the future support for hostname:port when used with compose are planned IDEA-335758
+  GTW-6977 Ports section is not available with devcontainers
+  */
 
