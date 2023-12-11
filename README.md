@@ -1,5 +1,5 @@
 # devcontainers-examples
-Examples of using DevContainers with JetBrains IDE.
+Examples of using DevContainers with JetBrains IDE (WIP).
 
 ## DevContainers - reproducible development environments
 The DevContainers approach allows for placing a fully functional development environment in containers:
@@ -8,12 +8,13 @@ The DevContainers approach allows for placing a fully functional development env
 - Appropriate versions of libraries and dependencies
 - Runtimes required by a specific codebase and project, used in continuous integration and testing.
 - Simple onboard new people (The development environment is configured automatically.)
-- The goal of DevContainers is to provide a fully functional, reproducible development environment along with an IDE.
+- Utilize remote development capabilities, working with code on a server equipped with Docker and necessary hardware
+
+The goal of DevContainers is to provide a fully functional, reproducible development environment along with an IDE.
 
 DevContainers help save a lot of time setting up the development environment, especially during the onboarding of new employees to a project.
 For new colleagues, it often translates to reading tons of documentation.
 Besides coding, developers frequently spend time figuring out which dependencies are needed to make the code work.
-Or the code was written on macOS and for some reason, it doesn't work when run on Windows. What could have gone wrong? :)
 
 JetBrains development environments are introducing built-in support for DevContainers.
 DevContainers come pre-configured with the required environments and dependencies as needed for your project.
@@ -25,15 +26,35 @@ When you connect to a DevContainer, your developer experience is the same as whe
 This works thanks to the Remote Development technology, where an IDE server runs inside the container and a local frontend,
 which exchange only the changes in the view in a very fast and efficient manner thanks to the RD protocol.
 
-In this repository, you will find several examples that will help you learn how to use DevContainers with the JetBrains 2023.3+ IDEs release.
+## How to create a Dev Container
+The *devcontainer.json* file in your project instructs IDE how to create a development
+container with a predefined tool and runtime stack.
 
-**Examples**
+The devcontainer.json file can be located in one of the following paths in the project:</p>
+ - .devcontainer/devcontainer.json
+ - .devcontainer.json
+ - .devcontainer/<folder>/devcontainer.json (where <folder> is a sub-folder, one level deep)
 
-`/.devcontainer/0-minimal_*` - base OS examples
+## How to build and run a Dev Container
+[Please read in the official documentation](https://www.jetbrains.com/help/idea/connect-to-devcontainer.html#start_from_gateway)
 
-`/.devcontainer/1-spec_*` - еxamples of using devcontainer.json options.
+### Dependencies
+Requires *Docker* installed on a local machine.
 
-`/.devcontainer/1-features_*` - features examples
+Remote Development may require some dependencies in the Dev Container, such as *curl*, *unzip*, *ps*, *libxext*, *libxrender*, 
+*libxtst*, *libxi*, *freetype*, *procps*, *gcompat*.
 
-`/.devcontainer/2-compose_*` - compose examples
+If your dev container doesn't start, try installing them (see more in the 0*-minimal examples). 
+
+We are working to reduce the number of Remote Development dependencies in future releases.
+
+[JetBrains IDE Plugin](https://plugins.jetbrains.com/plugin/21962-dev-containers)
+
+## Examples
+
+`/.devcontainer/0*-minimal_*` - base OS examples
+
+`/.devcontainer/1*-spec_*` - еxamples of using devcontainer.json options.
+
+
 
