@@ -1,4 +1,6 @@
+[![team project](http://jb.gg/badges/team.svg)](https://github.com/JetBrains#jetbrains-on-github)
 # devcontainers-examples
+
 Examples of using DevContainers with JetBrains IDE (WIP).
 
 ## DevContainers - reproducible development environments
