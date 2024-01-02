@@ -9,7 +9,7 @@ see remoteUser.
   "build": {
     "dockerfile": "./Dockerfile"
   },
-  "containerUser": "developer"
+  "containerUser": "root"
 }
 /*
 Please note that the user should be present in the container and have the necessary privileges. Example of adding to Dockerfile.
