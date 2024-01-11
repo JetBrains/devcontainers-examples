@@ -1,0 +1,10 @@
+/*
+Product specific properties, defined in supporting tools
+*/
+{
+  "name": "1_1_18-spec_customizations",
+  "image": "ubuntu:latest"
+}
+/*
+Not supported now, planned.
+*/
