@@ -9,16 +9,19 @@ For example: "mounts": [{ "source": "dind-var-lib-docker", "target": "/var/lib/d
   "name": "1_15-spec_mounts",
   "image": "ubuntu:latest",
   "mounts": [{
-    "source": "/Users",
-    "target": "/mac_users",
+    "source": "${localEnv:HOME}/bind",
+    "target": "/bindFolder",
     "type": "bind"
   }, {
-    "source": "Sources",
-    "target": "/volumes/Sources",
+    "source": "mount",
+    "target": "/volume/mount",
     "type": "volume"
   }]
 }
 /*
+run
+mkdir ~/bind && touch ~/bind/bindfile
+for test
 The choice between bind and volume depends on your usage scenario.
 If you need to work with files locally on your machine and have those changes synchronized w
 ith the container, a bind mount is typically the better choice.
