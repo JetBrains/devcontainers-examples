@@ -8,9 +8,10 @@ For example: "mounts": [{ "source": "dind-var-lib-docker", "target": "/var/lib/d
 {
   "name": "1_15-spec_mounts",
   "image": "ubuntu:latest",
+
   "mounts": [{
-    "source": "${localEnv:HOME}/bind",
-    "target": "/bindFolder",
+    "source": "${localEnv:HOME}",
+    "target": "/hostHome",
     "type": "bind"
   }, {
     "source": "mount",
