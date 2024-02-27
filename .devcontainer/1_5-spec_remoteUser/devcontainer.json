@@ -8,7 +8,9 @@ A dev container configuration will inherit the remoteUser property from the base
 */
 {
   "name": "1_5-spec_remoteUser",
-  "image": "ubuntu:latest",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
   "remoteUser": "developer"
 }
 //Not implemented now, planned
