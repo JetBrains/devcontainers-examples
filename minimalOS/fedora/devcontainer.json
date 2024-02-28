@@ -2,6 +2,6 @@
   "name": "minimal_fedora",
   "image": "fedora:latest",
   "onCreateCommand": {
-    "installDependencies": "sudo dnf install procps-ng"
+    "installDependencies": "sudo dnf install procps-ng -y"
   }
 }
