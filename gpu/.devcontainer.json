@@ -1,0 +1,10 @@
+//GPU support is still in the process of being implemented. IJPL-66504
+{
+  "name": "GPU Dev Container",
+
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "runArgs": ["--gpus=all"],
+}
