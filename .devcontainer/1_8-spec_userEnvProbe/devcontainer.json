@@ -14,8 +14,6 @@ Setting this property to loginInteractiveShell will get variables from all four 
   "runArgs": ["--env", "USERPATH=${localEnv:PATH}"]
 }
 /*
-Not implemented now, planned
-//TODO: IDEA-337387
 Use
 echo "USERPATH"
 for check.
