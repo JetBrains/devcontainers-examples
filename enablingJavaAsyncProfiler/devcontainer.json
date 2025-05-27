@@ -1,0 +1,9 @@
+//The example shows how to enable Java Async Profiler in a Dev Container
+{
+  "name": "minimal_ubuntu",
+  "image": "ubuntu:latest",
+  "runArgs": [
+    "--privileged"
+  ],
+  "postCreateCommand": "apt-get update && apt-get install -y procps && sysctl -w kernel.perf_event_paranoid=1"
+}
