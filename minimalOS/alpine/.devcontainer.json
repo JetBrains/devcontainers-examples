@@ -1,0 +1,5 @@
+{
+  "name": "minimal_alpine",
+  "image": "frolvlad/alpine-glibc:latest",
+  "onCreateCommand": "apk add --no-cache unzip curl libxext libxrender libxtst libxi freetype procps"
+}

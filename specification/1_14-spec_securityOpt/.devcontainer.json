@@ -1,0 +1,19 @@
+/*
+securityOpt
+-----------
+
+Array of extra Docker security options to apply to the container.
+
+Default: []
+
+Example:
+  "securityOpt": ["seccomp=unconfined"]
+
+In this example the default seccomp profile is disabled, so the container
+is not limited by Docker’s standard system-call filters.
+*/
+{
+  "name": "1_14-spec_securityOpt",
+  "image": "ubuntu:latest",
+  "securityOpt": [ "seccomp=unconfined" ]
+}

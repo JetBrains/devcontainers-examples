@@ -1,0 +1,4 @@
+{
+  "name": "minimal_manjaro",
+  "image": "manjarolinux/base:latest"
+}

@@ -1,0 +1,24 @@
+/*
+initCommand
+-----------
+
+The first of three lifecycle hooks (`initCommand`, `updateContentCommand`,
+`postCreateCommand`) that finish setting up the dev-container.
+
+• Executes **inside** the container immediately after its very first start.
+• Cloud services may run it while pre-building or caching the image, so
+  don’t expect user-specific files or secrets to be available.
+• Array form is invoked directly—no shell wrapper.
+*/
+
+{
+  "name": "spec-lifecycle_onCreateCommand",
+  "image": "ubuntu:latest",
+  //  "onCreateCommand": "echo 'Initializing Dev Container...'"
+  //  "onCreateCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
+  "onCreateCommand": {
+    "1": "echo a",
+    "2": "echo b",
+    "3": "echo c"
+  }
+}

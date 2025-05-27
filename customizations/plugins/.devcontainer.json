@@ -1,0 +1,18 @@
+{
+  // Example: install JetBrains IDE plugins in a dev-container with the
+  // “customization” section.
+  //
+  // To find a plugin’s ID, open its JetBrains Marketplace page and look in
+  // the “Additional Information” panel.
+  //   e.g. https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl
+
+  "name": "minimal_ubuntu",
+  "image": "ubuntu:latest",
+  "customizations": {
+    "jetbrains": {
+      "plugins": [
+        "org.intellij.plugins.hcl"
+      ],
+    },
+  }
+}

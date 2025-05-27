@@ -1,0 +1,35 @@
+
+/*
+ Maps a port—whether specified as a single number, a "host:port" pair, a range, or a regular expression—
+ to its default options.
+ See “Port attributes” for the list of available options.
+
+ Example:
+ "portsAttributes": {
+   "3000": { "label": "Application port" }
+ }
+*/
+
+/*
+The forwardPorts feature works only in automatic mode, so you don’t need to set any flag.
+When an application launched from the IDE inside the dev container starts listening on a port,
+that port is forwarded automatically.
+*/
+{
+  "name": "1_1-spec_portsAttributes",
+  "build": {
+    "dockerfile": "../../demoApps/python-webserver/Dockerfile"
+  },
+  "forwardPorts": [8080, 8090],
+  "portsAttributes": {
+    "8080": {
+      "label": "Web Default",
+    },
+    "8090": {
+      "label": "API Server",
+    }
+  }
+}
+
+//TODO: In the future support for onAutoForward, requireLocalPort, elevateIfNeeded are planned.
+//IDEA-337384

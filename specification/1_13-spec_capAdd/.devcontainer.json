@@ -1,0 +1,20 @@
+/*
+capAdd
+------
+
+A list of extra Linux capabilities to grant the container.
+Example:
+
+  "capAdd": ["SYS_PTRACE"]   // needed to debug C++, Go, Rust, etc.
+
+Default: [] (no additional capabilities).
+
+Use **capAdd** when a task requires privileges that a standard container lacks,
+so you don’t have to run the entire environment in full **privileged** mode.
+This keeps the setup more secure.
+*/
+{
+  "name": "1_13-spec_capAdd",
+  "image": "ubuntu:latest",
+  "capAdd": ["SYS_PTRACE"]
+}

@@ -1,0 +1,25 @@
+/*
+shutdownAction
+--------------
+
+Tells the IDE what to do with the container when its tool window closes or the
+backend shuts down.
+
+  • none          – Leave the container running.
+  • stopContainer – Stop just this container (default for images/Dockerfiles).
+  • stopCompose   – Shut down the entire Docker Compose stack (default for
+                    Compose).
+
+Choose **none** if you want the container to stay alive after the IDE
+disconnects—for example:
+
+  • **Long-running jobs** (model training, large data processing).
+  • **Background services** (web servers, databases) you still need.
+  • **Quicker return**—re-connecting is faster than a full restart.
+*/
+
+{
+  "name": "1_10-spec_shutdownAction",
+  "image": "ubuntu:latest",
+  "shutdownAction": "none"
+}

@@ -1,0 +1,36 @@
+
+/**
+ * Ports that should always be forwarded from the primary container
+ * to your local machine.
+ *
+ * Accepted formats:
+ *   • port number — `3000`
+ *   • host-and-port pair — `"db:5432"`
+ *
+ * Typical use cases:
+ *   • The process opens the port before the IDE can auto-forward it
+ *   • The port belongs to a service in **another** container (Docker Compose)
+ *
+ * Example
+ * ```json
+ * "forwardPorts": [3000, "db:5432"]
+ * ```
+ *
+ * Default: `[]`
+ */
+
+/*
+ * In most cases you don’t need to set `forwardPorts` manually.
+ * When an app inside the dev container starts listening on a port,
+ * the IDE forwards it automatically.
+ */
+{
+  "name": "1-spec_forwardPorts",
+  "build": {
+    "dockerfile": "../../demoApps/python-webserver/Dockerfile"
+  },
+  "forwardPorts": [8080]
+}
+  /*TODO: In the future support for hostname:port when used with compose are planned IDEA-335758
+  */
+

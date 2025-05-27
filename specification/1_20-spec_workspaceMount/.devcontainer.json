@@ -1,0 +1,18 @@
+/*
+workspaceMount
+--------------
+
+Defines how the workspace is mounted inside the container.
+
+• Customize the mount’s source, target, and options.
+• Useful when you need a different host path or specific mount flags.
+
+If omitted, the local workspace folder is mounted to `workspaceFolder`
+using the default settings.
+*/
+
+{
+  "name": "1_20-spec_workspaceMount",
+  "image": "ubuntu:latest",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+}

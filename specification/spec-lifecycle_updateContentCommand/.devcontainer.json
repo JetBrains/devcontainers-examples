@@ -1,0 +1,36 @@
+/*
+updateContentCommand
+--------------------
+
+The second of three lifecycle hooks (`initCommand`, `updateContentCommand`,
+`postCreateCommand`) used to finish setting up a dev-container.
+
+• Runs **inside** the container **after** `onCreateCommand` whenever new files
+  appear in the workspace during creation.
+• Executes at least once; cloud providers may run it again to refresh cached
+  or pre-built containers.
+• Only repository- or organisation-scoped secrets are available—assume no
+  user-scoped credentials.
+• Array form is executed directly (no shell).
+
+---
+
+**Viewing the output**
+
+In the JetBrains client IDE choose **Help ▸ Collect Host and Client Logs**.
+Unzip the archive and open `Host/idea.log` to see the command’s terminal
+output.
+*/
+
+{
+  "name": "spec-lifecycle_updateContentCommand",
+  "image": "ubuntu:latest",
+  //  "updateContentCommand": "echo 'Initializing Dev Container...'"
+  //  "updateContentCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
+  "updateContentCommand": {
+    "1": "ls /",
+    "2": "echo 'UpdateContentCommand...'",
+    "3": "echo 'ok'"
+  }
+}
+//TODO: IDEA-339416

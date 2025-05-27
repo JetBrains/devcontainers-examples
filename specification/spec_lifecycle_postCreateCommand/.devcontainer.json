@@ -1,0 +1,33 @@
+/*
+postCreateCommand
+-----------------
+
+The third and final setup hook (`initCommand`, `updateContentCommand`,
+`postCreateCommand`).
+
+• Runs **inside** the container **after** `updateContentCommand`, once the
+  container is assigned to a user for the first time.
+• At this stage, you can access user-scoped secrets and permissions—cloud
+  providers execute this hook only after the container becomes user-specific.
+• If you supply an array, it is run directly (no shell wrapper).
+
+---
+
+**Viewing the output**
+
+In the JetBrains client IDE, choose **Help ▸ Collect Host and Client Logs**.
+Unzip the archive and open `Host/idea.log` to see the command’s terminal
+output.
+*/
+{
+  "name": "spec-lifecycle_postCreateCommand",
+  "image": "ubuntu:latest",
+  //  "postCreateCommand": "echo 'Initializing Dev Container...'"
+  //  "postCreateCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
+  "postCreateCommand": {
+    "1": "ls /",
+    "2": "echo 'PostCreateCommand...'",
+    "3": "echo 'ok'"
+  }
+}
+//TODO: IDEA-339416

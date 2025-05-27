@@ -1,9 +1,0 @@
-/*
-  Defaults to false. Cross-orchestrator way to cause the container to run in privileged mode (--privileged).
-  Required for things like Docker-in-Docker, but has security implications particularly when running directly on Linux.
-*/
-{
-  "name": "1_12-spec_privileged",
-  "image": "ubuntu:latest",
-  privileged: true
-}

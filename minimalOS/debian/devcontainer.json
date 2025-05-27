@@ -1,8 +1,0 @@
-{
-  "name": "minimal_debian",
-  "image": "debian:latest",
-  "onCreateCommand": {
-    "update": "apt update",
-    "installDependencies": "apt install procps -y"
-  }
-}

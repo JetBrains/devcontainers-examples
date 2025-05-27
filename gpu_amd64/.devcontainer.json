@@ -1,0 +1,9 @@
+{
+  "name": "GPU Dev Container",
+
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "runArgs": ["--gpus=all"],
+}

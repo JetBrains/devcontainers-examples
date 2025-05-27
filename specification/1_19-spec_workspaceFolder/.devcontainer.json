@@ -1,0 +1,18 @@
+/*
+workspaceFolder
+---------------
+
+Absolute path in the container where the workspace is mounted.
+Change this if you need a different location.
+
+• Must be an absolute path (Linux or Windows style).
+• Supports variables such as ${localWorkspaceFolderBasename}.
+
+Default: "/workspaces/${localWorkspaceFolderBasename}"
+*/
+
+{
+  "name": "1_19-spec_workspaceFolder",
+  "image": "ubuntu:latest",
+  "workspaceFolder": "/custom-workspace/${localWorkspaceFolderBasename}"
+}

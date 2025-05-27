@@ -1,0 +1,4 @@
+{
+  "name": "minimal_debian",
+  "image": "debian:latest"
+}

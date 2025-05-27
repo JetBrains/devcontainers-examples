@@ -1,0 +1,33 @@
+/*
+overrideCommand
+---------------
+
+Decides whether supporting services/tools defined in `.devcontainer.json`
+should replace the container’s default command with a simple
+keep-alive loop:
+
+    /bin/sh -c "while sleep 1000; do :; done"
+
+This loop prevents the container from shutting down if its normal command
+exits immediately.
+
+• **true**  – Run the keep-alive loop instead of the image’s default command
+              (default for images built from a Dockerfile).
+• **false** – Run the image’s default command; choose this when the container
+              must start its normal entrypoint to function.
+
+Default behaviour:
+  • `true` when using an image or Dockerfile
+  • `false` when using a Docker Compose file
+
+Test note: a file named **test** is created in the container’s root (`/`)
+directory.
+*/
+
+{
+  "name": "1_9-spec_overrideCommand_false",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "overrideCommand": false
+}

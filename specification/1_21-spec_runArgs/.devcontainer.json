@@ -1,0 +1,26 @@
+/*
+runArgs
+-------
+
+Array of command-line flags passed straight to the container runtime
+(e.g. Docker) at launch time, letting you change behaviour without touching
+the Dockerfile.
+
+Typical examples:
+
+  • ["--env", "NAME=VALUE"]               // set an environment variable
+  • ["--volume", "/host:/container:ro"]   // bind or volume mount
+  • ["--network=host"]                    // switch network mode
+  • ["--gpus=all"]                        // expose GPUs
+  • ["--cap-add=SYS_PTRACE"]              // add a Linux capability
+*/
+
+{
+  "name": "1_21-spec_runArgs",
+  "image": "ubuntu:latest",
+  "runArgs": [
+    "--env", "EXAMPLE_VAR=example_value",
+    "--network=host",
+    "--cap-add=SYS_PTRACE"
+  ]
+}

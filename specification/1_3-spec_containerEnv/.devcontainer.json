@@ -1,0 +1,34 @@
+/*
+Defines environment variables for the container as simple key–value pairs.
+
+You can reference host or predefined variables in the values, e.g.:
+
+  "containerEnv": { "MY_VARIABLE": "${localEnv:MY_VARIABLE}" }
+
+Need to build on an existing container variable (for example, to extend PATH)?
+Use **remoteEnv** instead.
+
+`containerEnv` writes the variable directly into the Docker container, so every
+process inside can read it. The value is fixed for the life of the container—
+rebuild the container to change it.
+
+Whenever you can, prefer `containerEnv` over `remoteEnv`; it works for every
+process and isn’t tied to a particular client.
+
+---
+
+**Verify the variables**
+
+Inside the container, run:
+
+  echo $HOSTHOME $HOSTNAME
+*/
+{
+  "name": "1_3-spec_containerEnv",
+  "image": "ubuntu:latest",
+  "containerEnv": {
+    "HOSTHOME": "${localEnv:HOME}",
+    "HOSTNAME": "jetbrains.com"
+  }
+}
+

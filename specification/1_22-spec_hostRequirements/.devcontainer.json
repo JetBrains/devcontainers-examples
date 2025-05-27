@@ -1,0 +1,27 @@
+/*
+hostRequirements
+----------------
+
+Define the minimum host resources the dev-container needs.
+
+You can set:
+
+  • cpu        – minimum number of CPU cores
+  • memoryGB   – minimum RAM (GB)
+  • storageGB  – minimum disk space (GB)
+  • gpu        – required GPU type, or `true` if any GPU is needed
+
+If the host falls short of these limits, the IDE will show a warning.
+*/
+
+{
+  "name": "1_25-spec_hostRequirements",
+  "image": "ubuntu:latest",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb",
+    "gpu": "optional"
+  }
+}
+//TODO: IJPL-66527 Devcontainers: support "Minimum host requirements" options

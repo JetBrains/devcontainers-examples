@@ -6,6 +6,10 @@
     "installDependencies": "apt install -y git"
   },
   "customizations": {
-    "jetbrains" : {"backend": "IntelliJ"},
+    "jetbrains" : {
+
+    },
+    "settings": {
+    },"backend": "IntelliJ"},
   }
 }

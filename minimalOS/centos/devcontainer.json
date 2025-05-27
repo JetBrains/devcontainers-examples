@@ -1,4 +1,0 @@
-{
-  "name": "minimal_centos",
-  "image": "centos:latest"
-}

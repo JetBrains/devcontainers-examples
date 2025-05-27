@@ -1,0 +1,38 @@
+/*
+mounts
+------
+
+Adds extra mounts to the container.
+Each entry follows the syntax of Docker’s `--mount` flag and can reference
+environment or predefined variables.
+
+Default: *unset*.
+
+Example:
+  "mounts": [
+    { "type": "volume",
+      "source": "dind-var-lib-docker",
+      "target": "/var/lib/docker" }
+  ]
+
+Choosing a mount type
+• **Bind mount** – Ideal when you need to edit files on the host and have
+  changes appear instantly in the container.
+• **Volume** – Better for data that should persist across container runs but
+  doesn’t need to live on the host filesystem.
+*/
+
+{
+  "name": "1_15-spec_mounts",
+  "image": "ubuntu:latest",
+
+  "mounts": [{
+    "source": "${localEnv:HOME}",
+    "target": "/hostHome",
+    "type": "bind"
+  }, {
+    "source": "mount",
+    "target": "/volume/mount",
+    "type": "volume"
+  }]
+}

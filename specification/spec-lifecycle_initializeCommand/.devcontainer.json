@@ -1,0 +1,24 @@
+/*
+onCreateCommand
+---------------
+
+Command (string) or argv-style array to run on the **host** *before* the
+container is created.
+
+⚠️  Executes in the folder where the source lives—if your code is in the
+    cloud, the command runs there.
+
+• Array form is invoked directly (no shell).
+*/
+
+{
+  "name": "spec-lifecycle_initializeCommand",
+  "image": "ubuntu:latest",
+//  "initializeCommand": "echo 'Initializing Dev Container...'"
+//  "initializeCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
+  "initializeCommand": {
+    "1": "echo a",
+    "2": "echo b",
+    "3": "echo c"
+  }
+}

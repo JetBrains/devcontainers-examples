@@ -1,0 +1,20 @@
+/*
+remoteUser
+----------
+
+Specifies the Linux user that the JetBrains IDE backend and its helper tools
+(terminals, tasks, debuggers, etc.) run as inside the container.
+
+• **Does not** affect the default user for the entire container—use `containerUser`
+  for that.
+• If omitted, it inherits the container’s main user (typically `root`).
+• By default, the value comes from the base image used by the dev-container
+  configuration unless you override it here.
+*/
+{
+  "name": "1_5-spec_remoteUser",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "remoteUser": "developer"
+}

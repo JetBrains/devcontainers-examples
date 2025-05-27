@@ -1,0 +1,28 @@
+/*
+overrideCommand
+---------------
+
+Determines whether the supporting services/tools defined in `.devcontainer.json`
+replace the container’s default command with a simple keep-alive loop:
+
+    /bin/sh -c "while sleep 1000; do :; done"
+
+This loop prevents the container from exiting immediately if its normal
+command ends. Set **false** when the container must run its default
+entrypoint to work correctly.
+
+Default behaviour:
+  • **true** for containers built from a Dockerfile
+  • **false** for containers started via Docker Compose
+
+Note: In this setup the file **test** was *not* created in the root (`/`)
+directory because the Dockerfile’s `ENTRYPOINT` was overridden.
+*/
+
+{
+  "name": "1_9-spec_overrideCommand_true",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "overrideCommand": true
+}

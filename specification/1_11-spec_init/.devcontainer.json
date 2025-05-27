@@ -1,0 +1,23 @@
+/*
+init
+----
+
+Adds the `--init` flag when the dev container is created, so **tini** runs as
+PID 1.
+
+Why use it?
+• Tini is a tiny init system that reaps orphaned child processes, preventing
+  “zombie” PIDs.
+• It also forwards Unix signals, letting your app shut down cleanly.
+
+Default: **false**.
+The option works across orchestrators that support the `--init` flag.
+
+More details: https://github.com/krallin/tini
+*/
+
+{
+  "name": "1_11-spec_init",
+  "image": "ubuntu:latest",
+  "init": true
+}

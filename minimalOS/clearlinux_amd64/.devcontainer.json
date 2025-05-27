@@ -1,0 +1,4 @@
+{
+  "name": "minimal_clearlinux",
+  "image": "clearlinux:latest"
+}

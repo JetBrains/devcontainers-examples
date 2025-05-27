@@ -1,0 +1,4 @@
+{
+  "name": "minimal_rockylinux",
+  "image": "rockylinux/rockylinux:9"
+}

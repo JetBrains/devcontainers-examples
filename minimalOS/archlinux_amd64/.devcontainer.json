@@ -1,0 +1,4 @@
+{
+  "name": "minimal_archlinux",
+  "image": "menci/archlinux:latest"
+}

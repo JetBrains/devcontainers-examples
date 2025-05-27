@@ -1,0 +1,23 @@
+/*
+features
+--------
+
+A map of Dev Container Feature IDs (see https://containers.dev/features) and
+their configuration options to be added to your main container.
+
+Each feature supports its own set of options—check the feature’s
+documentation for specifics.
+
+Example:
+"features": {
+  "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+}
+*/
+
+{
+  "name": "1_16-spec_features",
+  "image": "ubuntu:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  }
+}

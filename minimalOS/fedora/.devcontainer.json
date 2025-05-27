@@ -1,0 +1,4 @@
+{
+  "name": "minimal_fedora",
+  "image": "fedora:latest"
+}

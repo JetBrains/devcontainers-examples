@@ -1,0 +1,4 @@
+{
+  "name": "minimal_gentoo",
+  "image": "gentoo/stage3:latest"
+}

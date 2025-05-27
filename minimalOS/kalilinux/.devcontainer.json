@@ -1,0 +1,4 @@
+{
+  "name": "minimal_kalilinux",
+  "image": "kalilinux/kali-rolling:latest"
+}

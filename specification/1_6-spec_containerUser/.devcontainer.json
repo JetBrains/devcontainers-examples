@@ -1,0 +1,25 @@
+/*
+containerUser
+-------------
+
+Defines the Linux user that **all** processes inside the container run as.
+
+• If omitted, the container starts as `root` or as the last `USER` specified
+  in your Dockerfile.
+• Need the IDE backend or its tools to run as a different user?
+  Use **remoteUser** instead.
+
+⚠️  The user must already exist in the image and have the right permissions.
+    Add one in your Dockerfile, for example:
+
+      RUN useradd -m devuser && \
+          chown -R devuser /workspace
+*/
+{
+  "name": "1_6-spec_containerUser",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "containerUser": "root"
+}
+

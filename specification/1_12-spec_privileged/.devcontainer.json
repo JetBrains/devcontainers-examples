@@ -1,0 +1,17 @@
+/*
+privileged
+----------
+
+Runs the container with Docker’s `--privileged` flag, granting it full host
+capabilities—necessary for setups such as Docker-in-Docker.
+
+Default: **false**.
+
+⚠️  Privileged mode weakens isolation and poses security risks, especially
+    on native Linux hosts. Enable only when strictly required.
+*/
+{
+  "name": "1_12-spec_privileged",
+  "image": "ubuntu:latest",
+  privileged: true
+}

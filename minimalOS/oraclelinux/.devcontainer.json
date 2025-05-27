@@ -1,0 +1,4 @@
+{
+  "name": "minimal_oraclelinux",
+  "image": "oraclelinux:8"
+}

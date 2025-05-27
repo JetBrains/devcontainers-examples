@@ -1,0 +1,42 @@
+/*
+userEnvProbe
+------------
+
+Controls **how** the IDE backend collects your local environment variables and
+passes them into supporting tools and processes defined in `.devcontainer.json`.
+
+Valid options (default = `loginInteractiveShell`):
+
+  • none
+    No variables are pulled from the host; only those defined in the
+    container image or in `.devcontainer.json` are available.
+
+  • interactiveShell
+    Runs a non-login interactive shell (e.g. Bash reads `/etc/bash.bashrc`
+    and `~/.bashrc`). Login-only files such as `~/.profile` are **not** read.
+
+  • loginShell
+    Runs a login (non-interactive) shell, loading files like
+    `/etc/profile`, `~/.bash_profile`, `~/.bash_login`, or `~/.profile`.
+
+  • loginInteractiveShell
+    Runs an interactive **login** shell, so it sources *all* of the above
+    files. This gives the most complete set of variables.
+
+The actual shell is whatever the user’s default is (usually Bash).
+
+---
+
+**Check what was imported**
+
+Inside the container, inspect a variable with:
+
+  echo "$USERPATH"
+*/
+
+{
+  "name": "1_8-spec_userEnvProbe",
+  "image": "ubuntu:latest",
+  "userEnvProbe": "loginInteractiveShell",
+  "runArgs": ["--env", "USERPATH=${localEnv:PATH}"]
+}

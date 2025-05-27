@@ -1,0 +1,31 @@
+/*
+postStartCommand
+----------------
+
+Command that runs every time the container starts successfully.
+
+• Accepts either a single string or an array of arguments.
+  Array form is executed directly (no shell).
+
+---
+
+**How to check the output**
+
+In the JetBrains client IDE, choose **Help ▸ Collect Host and Client Logs**.
+Unzip the archive, then open `Host/idea.log` to see the command’s terminal
+output.
+
+*/
+
+{
+  "name": "spec-lifecycle_postStartCommand",
+  "image": "ubuntu:latest",
+  //  "postCreateCommand": "echo 'Initializing Dev Container...'"
+  //  "postCreateCommand": ["sh", "-c", "echo 'Initializing Dev Container...'"]
+  "postCreateCommand": {
+    "1": "ls /",
+    "2": "echo 'PostStartCommand...'",
+    "3": "echo 'ok'"
+  }
+}
+//TODO: IDEA-339416

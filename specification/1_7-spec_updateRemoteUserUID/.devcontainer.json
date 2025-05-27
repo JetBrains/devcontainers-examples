@@ -1,0 +1,26 @@
+/*
+updateUIDGID
+------------
+
+On Linux, when you specify `containerUser` or `remoteUser`, the container
+automatically updates that user’s UID and GID to match your local user.
+This prevents permission issues with bind-mounted files.
+Default: **true**.
+
+If you already have host files that rely on fixed UID/GID values and must be
+accessible from the container, consider turning this feature off to keep the
+container user’s IDs unchanged.
+
+Check the current IDs and file ownership inside the container with:
+
+  id      # shows your UID and GID
+  ls -l   # shows ownership of files
+*/
+{
+  "name": "1_7-spec_updateRemoteUserUID",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "containerUser": "root",
+  "updateRemoteUserUID": false
+}

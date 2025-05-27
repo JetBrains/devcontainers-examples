@@ -1,0 +1,36 @@
+/*
+remoteEnv
+---------
+
+Key–value pairs that set or override environment variables **only** for the JetBrains IDE
+backend and its helper processes (such as integrated terminals), **not** for the entire
+Docker container.
+
+• Values can reference host-side or predefined variables.
+• Choose **remoteEnv** over **containerEnv** when the variable needs to change at runtime
+  because remoteEnv can be updated without rebuilding the whole container (once
+  rebuild/restart logic is fully in place).
+
+-------------------------------------------------
+containerEnv vs. remoteEnv (at a glance)
+-------------------------------------------------
+containerEnv – Baked into the image during `docker build`; visible to every process
+               in the container; changes require a rebuild.
+
+remoteEnv    – Injected when the JetBrains IDE backend starts; affects only the
+               backend and its sub-processes; can be refreshed on restart.
+
+Default guideline: use **containerEnv** unless you specifically need the flexibility
+of runtime updates provided by **remoteEnv**.
+*/
+
+{
+  "name": "1_4-spec_remoteEnv",
+  "image": "ubuntu:latest",
+  "remoteEnv": {
+    "DYNAMIC_VAR": "initial"
+  },
+  "containerEnv": {
+    "STATIC_VAR": "initial"
+  }
+}
